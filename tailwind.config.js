@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        avengers: ['Avengers', 'sans-serif'],
+        avengers: ['var(--font-avengers)', 'sans-serif'],
         metal: ['var(--font-fira-sans)', 'sans-serif'],
         tech: ['var(--font-michroma)', 'sans-serif'],
         heading: ['var(--font-orbitron)', 'sans-serif'],

@@ -1,5 +1,6 @@
 import { Inter, Orbitron, Michroma, Fira_Sans } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron", weight: ["400", "700", "900"] });
@@ -10,6 +11,17 @@ export const metadata = {
   title: "ACM Weekend | Avengers Doomsday",
   description: "ACM Weekend is a dynamic, multi-event experience including Deco Disaster, Commit Happens, and Model Wars.",
 };
+
+const avengers = localFont({
+  src: [
+    {
+      path: './fonts/AvengeroDisassembledRegular-nRvd4.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-futura',
+});
 
 export default function RootLayout({ children }) {
   return (
