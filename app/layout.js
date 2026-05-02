@@ -20,13 +20,13 @@ const avengers = localFont({
       style: 'normal',
     },
   ],
-  variable: '--font-futura',
+  variable: '--font-avengers',
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${orbitron.variable} ${michroma.variable} ${firaSans.variable} font-body antialiased bg-doom-black min-h-screen`}>
+      <body className={`${inter.variable} ${orbitron.variable} ${michroma.variable} ${firaSans.variable} ${avengers.variable} font-body antialiased bg-doom-black min-h-screen`}>
         {children}
       </body>
     </html>

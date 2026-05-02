@@ -39,10 +39,10 @@ export default function Hero() {
       <div className="relative w-full max-w-7xl mx-auto px-6 text-center z-10">
         {/* Title with Fluid Scaling */}
         <div className="mb-6 md:mb-8">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-avengers text-white leading-none">
-            <span className="block mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">ACM</span>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-avengers text-white leading-[1.5]">
+            <span className="block mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] pt-12 pb-4">ACM</span>
             <span
-              className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-doom-green via-emerald-400 to-doom-green glitch-effect-strong py-2"
+              className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-doom-green via-emerald-400 to-doom-green glitch-effect-strong pb-6"
               data-text="Weekend"
             >
               Weekend
