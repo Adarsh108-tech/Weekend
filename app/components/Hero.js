@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="absolute -left-4 lg:-left-10 top-1/2 w-4 lg:w-8 h-[1px] bg-doom-green/30 hidden sm:block"></div>
           <p className="font-tech text-[10px] md:text-sm text-doom-silver uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">
             Temporal Displacement Detected <br className="sm:hidden" />
-            <span className="text-white block sm:inline mt-1 sm:mt-0">09.05.26 — 10.05.26</span>
+            <span className="text-white block sm:inline mt-1 sm:mt-0">16.05.26 — 17.05.26</span>
             <span className="hidden sm:inline mx-3 text-doom-green">//</span>
             <br className="sm:hidden" />
             <span className="animate-pulse text-doom-green sm:text-doom-silver">Virtual Battlefield</span>
