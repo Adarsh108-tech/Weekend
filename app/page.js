@@ -6,18 +6,27 @@ import Events from "./components/Events";
 import Prizes from "./components/Prizes";
 import Register from "./components/Register";
 import Footer from "./components/Footer";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
       <Particles />
       <Navbar />
-      <Hero />
-      <About />
-      <Events />
+      <ScrollReveal animation="fade" duration={1000}>
+        <Hero />
+      </ScrollReveal>
+      <ScrollReveal animation="slide-up" duration={800}>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal animation="slide-up" duration={800}>
+        <Events />
+      </ScrollReveal>
       <Prizes />
       <Register />
-      <Footer />
+      <ScrollReveal animation="fade" duration={600}>
+        <Footer />
+      </ScrollReveal>
     </>
   );
 }

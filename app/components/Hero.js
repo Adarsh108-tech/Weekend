@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-doom-black">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gray-50 dark:bg-doom-black transition-colors duration-500">
       {/* 1. Tactical Background Layer */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-doomsday-gradient opacity-40"></div>
+        <div className="absolute inset-0 bg-doomsday-gradient opacity-10 dark:opacity-40 transition-opacity duration-500"></div>
         {/* Scanning Grid Effect */}
         <div
           className="absolute inset-0 opacity-10"
@@ -13,7 +13,7 @@ export default function Hero() {
           }}
         ></div>
         {/* Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0c_90%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0c_90%)] opacity-0 dark:opacity-100 transition-opacity duration-500"></div>
       </div>
 
       {/* 2. Character Deployment Zones - Responsive Adjustments */}
@@ -39,10 +39,10 @@ export default function Hero() {
       <div className="relative w-full max-w-7xl mx-auto px-6 text-center z-10">
         {/* Title with Fluid Scaling */}
         <div className="mb-6 md:mb-8">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-avengers text-white leading-[1.5]">
-            <span className="block mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] pt-12 pb-4">ACM</span>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-avengers text-gray-900 dark:text-white transition-colors leading-[1.5]">
+            <span className="block mb-4 drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] pt-12 pb-4">ACM</span>
             <span
-              className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-doom-green via-emerald-400 to-doom-green glitch-effect-strong pb-6"
+              className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-doom-greenDark dark:from-doom-green via-emerald-600 dark:via-emerald-400 to-doom-greenDark dark:to-doom-green glitch-effect-strong pb-6"
               data-text="Weekend"
             >
               Weekend
@@ -53,12 +53,12 @@ export default function Hero() {
         {/* Tactical Subtext - Responsive Width */}
         <div className="max-w-xs sm:max-w-md md:max-w-xl mx-auto mb-10 md:mb-12 relative">
           <div className="absolute -left-4 lg:-left-10 top-1/2 w-4 lg:w-8 h-[1px] bg-doom-green/30 hidden sm:block"></div>
-          <p className="font-tech text-[10px] md:text-sm text-doom-silver uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">
+          <p className="font-tech text-[10px] md:text-sm text-gray-600 dark:text-doom-silver transition-colors uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">
             Temporal Displacement Detected <br className="sm:hidden" />
-            <span className="text-white block sm:inline mt-1 sm:mt-0">16.05.26 — 17.05.26</span>
-            <span className="hidden sm:inline mx-3 text-doom-green">//</span>
+            <span className="text-gray-900 dark:text-white transition-colors block sm:inline mt-1 sm:mt-0">16.05.26 — 17.05.26</span>
+            <span className="hidden sm:inline mx-3 text-doom-greenDark dark:text-doom-green">//</span>
             <br className="sm:hidden" />
-            <span className="animate-pulse text-doom-green sm:text-doom-silver">Virtual Battlefield</span>
+            <span className="animate-pulse text-doom-greenDark dark:text-doom-green sm:text-gray-600 sm:dark:text-doom-silver">Virtual Battlefield</span>
           </p>
           <div className="absolute -right-4 lg:-right-10 top-1/2 w-4 lg:w-8 h-[1px] bg-doom-green/30 hidden sm:block"></div>
         </div>
@@ -77,10 +77,10 @@ export default function Hero() {
 
           <a
             href="#about"
-            className="w-full sm:w-auto group px-8 md:px-10 py-3 md:py-4 border border-doom-silver/50 hover:border-doom-green transition-all relative overflow-hidden text-center"
+            className="w-full sm:w-auto group px-8 md:px-10 py-3 md:py-4 border border-gray-300 dark:border-doom-silver/50 hover:border-doom-green dark:hover:border-doom-green transition-all relative overflow-hidden text-center"
           >
             <div className="absolute inset-0 bg-doom-green/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-            <span className="relative font-heading font-bold text-white group-hover:text-doom-green uppercase tracking-widest text-xs md:text-sm">
+            <span className="relative font-heading font-bold text-gray-900 dark:text-white group-hover:text-doom-greenDark dark:group-hover:text-doom-green uppercase tracking-widest text-xs md:text-sm transition-colors">
               Briefing
             </span>
           </a>

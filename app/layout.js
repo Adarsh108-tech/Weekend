@@ -1,6 +1,7 @@
 import { Inter, Orbitron, Michroma, Fira_Sans } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import ThemeProviderWrapper from "./components/ThemeProviderWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron", weight: ["400", "700", "900"] });
@@ -25,9 +26,11 @@ const avengers = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${orbitron.variable} ${michroma.variable} ${firaSans.variable} ${avengers.variable} font-body antialiased bg-doom-black min-h-screen`}>
-        {children}
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.variable} ${orbitron.variable} ${michroma.variable} ${firaSans.variable} ${avengers.variable} font-body antialiased bg-white dark:bg-doom-black text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300`}>
+        <ThemeProviderWrapper>
+          {children}
+        </ThemeProviderWrapper>
       </body>
     </html>
   );

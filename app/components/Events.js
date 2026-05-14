@@ -54,25 +54,25 @@ const MissionCard = ({ mission, index }) => {
 
       {/* TEXT SIDE */}
       <div className={`w-full md:w-[42%] order-2 ${isLeft ? 'md:order-1' : 'md:order-3'}`}>
-        <div className="relative p-6 md:p-8 bg-card-gradient border border-doom-green/20 rounded-xl group hover:border-doom-green/50 transition-all duration-500 shadow-xl h-full flex flex-col justify-center">
+        <div className="relative p-6 md:p-8 bg-white dark:bg-card-gradient border border-gray-200 dark:border-doom-green/20 rounded-xl group hover:border-doom-green/50 dark:hover:border-doom-green/50 transition-all duration-500 shadow-md dark:shadow-xl h-full flex flex-col justify-center">
           {/* HUD Brackets */}
           <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-doom-green/40 group-hover:border-doom-green transition-colors" />
           <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-doom-green/40 group-hover:border-doom-green transition-colors" />
 
-          <div className="font-tech text-doom-green text-[10px] mb-3 uppercase tracking-[0.3em] flex justify-between items-center">
+          <div className="font-tech text-doom-greenDark dark:text-doom-green transition-colors text-[10px] mb-3 uppercase tracking-[0.3em] flex justify-between items-center">
             <span>Mission {mission.id} // {mission.time}</span>
             <span className="h-[1px] flex-grow mx-4 bg-doom-green/20" />
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-heading text-white mb-4 uppercase tracking-tighter">
+          <h3 className="text-2xl md:text-3xl font-heading text-gray-900 dark:text-white transition-colors mb-4 uppercase tracking-tighter">
             {title}
           </h3>
 
-          <div className="font-tech inline-flex w-fit px-3 py-1 bg-doom-green/5 text-doom-green text-[10px] border border-doom-green/20 mb-6 uppercase">
+          <div className="font-tech inline-flex w-fit px-3 py-1 bg-doom-green/5 text-doom-greenDark dark:text-doom-green transition-colors text-[10px] border border-gray-200 dark:border-doom-green/20 mb-6 uppercase">
             Scheduled: {mission.date}
           </div>
 
-          <p className="font-body text-doom-silver text-base leading-relaxed">
+          <p className="font-body text-gray-600 dark:text-doom-silver transition-colors text-base leading-relaxed">
             {mission.description}
           </p>
         </div>
@@ -92,7 +92,7 @@ const MissionCard = ({ mission, index }) => {
 
           {/* Terminal Overlay */}
           <div className="absolute bottom-4 left-4 z-20">
-            <div className="font-tech text-[8px] text-doom-green bg-doom-black/80 px-2 py-1 border border-doom-green/20">
+            <div className="font-tech text-[8px] text-doom-greenDark dark:text-doom-green bg-white/90 dark:bg-doom-black/80 px-2 py-1 border border-gray-200 dark:border-doom-green/20 transition-colors">
               VISUAL_FEED_{mission.id} : ACTIVE
             </div>
           </div>
@@ -132,17 +132,17 @@ export default function Events() {
   ];
 
   return (
-    <section id="events" className="py-24 bg-doom-black relative overflow-hidden border-t border-doom-green/10">
+    <section id="events" className="py-24 bg-gray-50 dark:bg-doom-black transition-colors duration-500 relative overflow-hidden border-t border-gray-200 dark:border-doom-green/10">
 
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(57,255,20,0.03)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-32">
-          <h2 className="font-heading text-4xl md:text-6xl text-white uppercase tracking-widest">
-            Primary <span className="text-doom-green drop-shadow-[0_0_15px_#39ff14]">Missions</span>
+          <h2 className="font-heading text-4xl md:text-6xl text-gray-900 dark:text-white transition-colors uppercase tracking-widest">
+            Primary <span className="text-doom-greenDark dark:text-doom-green drop-shadow-sm dark:drop-shadow-[0_0_15px_#39ff14]">Missions</span>
           </h2>
-          <p className="font-tech text-doom-silver/40 text-[10px] mt-4 tracking-[0.5em]">SYSTEM_INITIALIZED // SELECT_OBJECTIVE</p>
+          <p className="font-tech text-gray-500 dark:text-doom-silver/40 transition-colors text-[10px] mt-4 tracking-[0.5em]">SYSTEM_INITIALIZED // SELECT_OBJECTIVE</p>
         </div>
 
         <div className="relative">

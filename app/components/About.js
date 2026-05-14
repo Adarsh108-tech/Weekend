@@ -48,93 +48,105 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center py-12 md:py-24 bg-doom-black overflow-hidden border-y border-doom-green/20"
+      className="relative min-h-screen flex items-center justify-center py-20 bg-white dark:bg-doom-black transition-colors duration-500 overflow-hidden border-y border-gray-200 dark:border-doom-green/20"
     >
       {/* BACKGROUND LAYER */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="wall.webp"
-          alt="Background"
-          className="w-full h-full object-cover opacity-20 md:opacity-40 mix-blend-luminosity"
+        <div className="absolute inset-0 bg-white/95 dark:bg-doom-black/90 z-10" />
+        <div
+          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.07]"
+          style={{ backgroundImage: 'radial-gradient(#39ff14 1px, transparent 1px)', backgroundSize: '30px 30px' }}
         />
-        <div className="absolute inset-0 bg-doom-black/80 md:bg-doom-black/60 backdrop-blur-[1px]" />
       </div>
 
       {/* SCANLINE ANIMATION */}
-      <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-doom-green/5 to-transparent h-[15%] w-full -translate-y-full animate-scan opacity-40" />
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-doom-green/5 to-transparent h-[20%] w-full -translate-y-full animate-scan opacity-30" />
       </div>
 
-      {/* Main Container */}
-      <div className="w-full max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 relative z-20">
+      <div className="container mx-auto px-6 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl text-white uppercase tracking-tighter mb-4 leading-tight">
-            {title.split(" ").map((word, i) => (
-              <span key={i} className={i === 1 ? "text-doom-green drop-shadow-[0_0_10px_rgba(57,255,20,0.6)]" : ""}>
-                {word}{" "}
-              </span>
-            ))}
-          </h2>
-          <div className="flex items-center justify-center gap-2 md:gap-4">
-            <div className="h-[1px] flex-1 max-w-[40px] bg-doom-green/30" />
-            <span className="font-tech text-[8px] sm:text-xs text-doom-green uppercase tracking-[0.15em] md:tracking-[0.4em] animate-pulse whitespace-nowrap">
-              {subTitle}
-            </span>
-            <div className="h-[1px] flex-1 max-w-[40px] bg-doom-green/30" />
-          </div>
-        </div>
+          {/* LEFT: CONTENT COLUMN */}
+          <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="h-[2px] w-8 bg-doom-green" />
+                <span className="font-tech text-xs text-doom-greenDark dark:text-doom-green tracking-[0.3em] uppercase">
+                  {subTitle}
+                </span>
+              </div>
 
-        {/* Centered Content Card */}
-        <div className="bg-doom-black/60 backdrop-blur-md p-6 sm:p-10 md:p-14 border border-doom-green/20 rounded-xl md:rounded-2xl shadow-neon-strong relative group transition-all duration-500">
-
-          {/* Futuristic Corner Brackets: Adjusted offset for small screens */}
-          <div className="absolute -top-[2px] -left-[2px] w-6 h-6 md:w-12 md:h-12 border-t-2 border-l-2 border-doom-green" />
-          <div className="absolute -bottom-[2px] -right-[2px] w-6 h-6 md:w-12 md:h-12 border-b-2 border-r-2 border-doom-green" />
-
-          <div className="space-y-6 md:space-y-10 text-center">
-            {/* Encryption Level Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 border border-doom-green/20 bg-doom-green/5 rounded-full">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-doom-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-doom-green"></span>
-              </span>
-              <span className="font-tech text-[7px] md:text-[10px] text-doom-green tracking-widest uppercase">Encryption: MAX</span>
+              <h2 className="font-heading text-5xl md:text-7xl lg:text-8xl text-gray-900 dark:text-white transition-colors uppercase tracking-tighter leading-none">
+                {title.split(" ").map((word, i) => (
+                  <span key={i} className={i === 1 ? "text-doom-greenDark dark:text-doom-green block lg:inline" : "block lg:inline"}>
+                    {word}{" "}
+                  </span>
+                ))}
+              </h2>
             </div>
 
-            {/* Paragraph text: Improved Mobile Leading */}
-            <div className="font-body text-sm sm:text-lg md:text-xl text-doom-silver leading-relaxed md:leading-loose space-y-5 md:space-y-8 max-w-2xl mx-auto">
-              <p className="opacity-90">
-                Prepare to enter a <span className="text-white font-bold">high-fidelity simulation</span> where reality and code collide. This is a 48-hour pressure cooker for the mind.
-              </p>
-              <p className="opacity-90">
-                Expect <span className="text-doom-green">rapid-fire problem solving</span> and the raw adrenaline of building at the absolute edge of possibility.
-              </p>
+            <div className="relative">
+              <div className="absolute -left-6 top-0 bottom-0 w-[1px] bg-gradient-to-b from-doom-green via-doom-green/20 to-transparent hidden md:block" />
+              <div className="font-body text-lg md:text-xl text-gray-700 dark:text-doom-silver transition-colors leading-relaxed space-y-6 max-w-xl">
+                <p className="opacity-90">
+                  Prepare to enter a <span className="text-gray-900 dark:text-white font-bold border-b border-doom-green/30">high-fidelity simulation</span> where reality and code collide. This is a 48-hour pressure cooker for the mind.
+                </p>
+                <p className="opacity-90">
+                  Expect <span className="text-doom-greenDark dark:text-doom-green">rapid-fire problem solving</span> and the raw adrenaline of building at the absolute edge of possibility.
+                </p>
+              </div>
             </div>
 
-            {/* Footer Tech Text */}
-            <div className="pt-6 border-t border-doom-green/10">
-              <p className="italic text-[9px] md:text-sm text-doom-green/60 font-tech tracking-[0.2em]">
-                // DATA_STREAM: OVERLOAD_EXPECTED
+            <div className="pt-8 flex items-center gap-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-doom-green/20 bg-doom-green/5 rounded-none skew-x-[-12deg]">
+                <span className="font-tech text-xs text-doom-greenDark dark:text-doom-green tracking-widest uppercase">Encryption: MAX</span>
+              </div>
+              <p className="italic text-[10px] text-gray-400 dark:text-doom-silver/40 font-tech tracking-widest">
+                // DATA_STREAM: ACTIVE
               </p>
             </div>
           </div>
+
+          {/* RIGHT: IMAGE COLUMN */}
+          <div className="relative order-1 lg:order-2 group">
+            {/* Decorative Brackets around image */}
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-doom-green z-30 transition-all duration-500 group-hover:-top-2 group-hover:-left-2" />
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-doom-green z-30 transition-all duration-500 group-hover:-bottom-2 group-hover:-right-2" />
+
+            {/* Main Image Container */}
+            <div className="relative aspect-[4/5] overflow-hidden skew-x-[-2deg] border border-gray-200 dark:border-doom-green/30 bg-gray-100 dark:bg-doom-black shadow-2xl transition-transform duration-700 group-hover:skew-x-0">
+              <img
+                src="/blaze.gif" // Replace with your image
+                alt="Tactical Briefing"
+                className="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 "
+              />
+
+              {/* Overlay HUD elements on image */}
+              <div className="absolute inset-0 bg-gradient-to-t from-doom-black/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 font-tech text-[10px] text-doom-green tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                TARGET_ACQUIRED: 100%
+              </div>
+            </div>
+
+            {/* Floating Tech Deco */}
+            <div className="absolute -right-8 top-1/4 hidden xl:block">
+              <div className="font-tech text-[10px] text-doom-green/20 rotate-90 origin-left tracking-[1em] uppercase">
+                Neural_Interface_Connected
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      {/* Decorative Grid Overlay */}
-      <div className="absolute inset-0 opacity-[0.02] md:opacity-[0.05] pointer-events-none z-10"
-        style={{ backgroundImage: 'linear-gradient(#39ff14 1px, transparent 1px), linear-gradient(90deg, #39ff14 1px, transparent 1px)', backgroundSize: '25px 25px' }}
-      />
 
       <style jsx>{`
         @keyframes scan {
           0% { transform: translateY(-100%); }
-          100% { transform: translateY(600%); }
+          100% { transform: translateY(500%); }
         }
         .animate-scan {
-          animation: scan 5s linear infinite;
+          animation: scan 8s linear infinite;
         }
       `}</style>
     </section>
