@@ -71,7 +71,7 @@ export default function Register() {
     {
       title: "Deco Disaster",
       tag: "UX_Matrix",
-      description: "Enter the design interface. Reconstruct the visual experience of the digital void.",
+      description: "A fast-paced, intellectually stimulating puzzle-solving environment. Encourages lateral thinking and collaboration to solve creative challenges.",
       link: "https://register.decodisaster.live/"
     },
     {
