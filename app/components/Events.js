@@ -108,7 +108,7 @@ export default function Events() {
     {
       id: "01",
       title: "COMMIT HAPPENS",
-      date: "16th May 2026",
+      date: "19th May 2026",
       time: "17:00 HRS",
       gif: "/dr-launch.gif", // Replace with your local or hosted gif
       description: "A high-intensity hack sprint. Given real-world problem statements, you must ideate, design, and build functional prototypes under pressure. Sharpen your tools, the compiler waits for no one."
@@ -116,7 +116,7 @@ export default function Events() {
     {
       id: "02",
       title: "DECO DISASTER",
-      date: "17th May 2026",
+      date: "20th May 2026",
       time: "14:00 HRS",
       gif: "/drdoom-walkforward.gif",
       description: "A fast-paced, intellectually stimulating puzzle-solving environment. Encourages lateral thinking and collaboration to solve creative challenges. The interface is broken; only you can fix it."
@@ -124,7 +124,7 @@ export default function Events() {
     {
       id: "03",
       title: "MODEL WARS",
-      date: "16th May 2026",
+      date: "19th - 20th May 2026",
       time: "17:00 HRS",
       gif: "/drdoom-airattack.gif",
       description: "Dive into AI and Machine Learning. Build and optimize models on real datasets while bridging the gap between theory and practical application. May the best weights win."
